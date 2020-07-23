@@ -49,4 +49,48 @@ extension UIView {
     func centerYTo(view: UIView) {
         centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
     }
+    
+    func inputContainerView(image: UIImage, textField: UITextField) -> UIView {
+        let view = UIView()
+        
+        let imageView = UIImageView()
+        imageView.image = image
+        imageView.alpha = 0.87
+        view.addSubview(imageView)
+        imageView.centerYTo(view: view)
+        imageView.anchor(left: view.leftAnchor, paddingLeft: 8, width: 24, height: 24)
+        
+        view.addSubview(textField)
+        textField.centerYTo(view: view)
+        textField.anchor(left: imageView.rightAnchor, right: view.rightAnchor, paddingLeft: 8, paddingRight: 16)
+        
+        let separatorView = UIView()
+        separatorView.backgroundColor = .lightGray
+        view.addSubview(separatorView)
+        separatorView.anchor(left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, paddingLeft: 8, height: 0.75)
+        
+        return view
+    }
+}
+
+extension UITextField {
+    func textField(placeholder: String, isSecure: Bool) -> UITextField {
+        let tf = UITextField()
+        tf.borderStyle = .none
+        tf.font = UIFont.systemFont(ofSize: 16)
+        tf.textColor = .white
+        tf.keyboardAppearance = .dark
+        tf.isSecureTextEntry = isSecure
+        tf.attributedPlaceholder = NSAttributedString(string: placeholder, attributes: [NSAttributedString.Key.foregroundColor : UIColor.gray])
+        return tf
+    }
+}
+
+extension UIColor {
+    static func rgb(red: CGFloat, green: CGFloat, blue: CGFloat) -> UIColor {
+        return UIColor.init(red: red/255, green: green/255, blue: blue/255, alpha: 1.0)
+    }
+    
+    static let backgroundColor = rgb(red: 25, green: 25, blue: 25)
+    static let mainBlueTintColor = rgb(red: 17, green: 154, blue: 237)
 }

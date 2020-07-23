@@ -15,6 +15,12 @@
 		8B73772224C95FC0009E202A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B73772024C95FC0009E202A /* LaunchScreen.storyboard */; };
 		8B73772C24C96007009E202A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B73772B24C96007009E202A /* LoginViewController.swift */; };
 		8B73773024C96C93009E202A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B73772F24C96C93009E202A /* Extensions.swift */; };
+		8B73773224C9A38C009E202A /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B73773124C9A38C009E202A /* LoginView.swift */; };
+		8B73773424C9A564009E202A /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B73773324C9A564009E202A /* BaseView.swift */; };
+		8B73773624C9A8D8009E202A /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B73773524C9A8D8009E202A /* BaseViewController.swift */; };
+		8B73773924C9B056009E202A /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B73773824C9B056009E202A /* LoginRouter.swift */; };
+		8B73773B24C9B0CE009E202A /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B73773A24C9B0CE009E202A /* SignUpViewController.swift */; };
+		8B73773D24C9B1D3009E202A /* LoginBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B73773C24C9B1D3009E202A /* LoginBuilder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +34,12 @@
 		8B73772324C95FC0009E202A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B73772B24C96007009E202A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		8B73772F24C96C93009E202A /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		8B73773124C9A38C009E202A /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		8B73773324C9A564009E202A /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		8B73773524C9A8D8009E202A /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		8B73773824C9B056009E202A /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
+		8B73773A24C9B0CE009E202A /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		8B73773C24C9B1D3009E202A /* LoginBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginBuilder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +72,7 @@
 		8B73771424C95FBA009E202A /* Taxol */ = {
 			isa = PBXGroup;
 			children = (
+				8B73773724C9AFF6009E202A /* SignUp */,
 				8B73772924C95FD7009E202A /* Login */,
 				8B73772D24C967F7009E202A /* App Coordinator */,
 				8B73771E24C95FC0009E202A /* Assets.xcassets */,
@@ -73,6 +86,8 @@
 			isa = PBXGroup;
 			children = (
 				8B73772A24C95FE7009E202A /* View */,
+				8B73773824C9B056009E202A /* LoginRouter.swift */,
+				8B73773C24C9B1D3009E202A /* LoginBuilder.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -80,6 +95,7 @@
 		8B73772A24C95FE7009E202A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8B73773124C9A38C009E202A /* LoginView.swift */,
 				8B73772B24C96007009E202A /* LoginViewController.swift */,
 			);
 			path = View;
@@ -101,8 +117,18 @@
 			isa = PBXGroup;
 			children = (
 				8B73772F24C96C93009E202A /* Extensions.swift */,
+				8B73773324C9A564009E202A /* BaseView.swift */,
+				8B73773524C9A8D8009E202A /* BaseViewController.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		8B73773724C9AFF6009E202A /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				8B73773A24C9B0CE009E202A /* SignUpViewController.swift */,
+			);
+			path = SignUp;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,9 +202,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B73773D24C9B1D3009E202A /* LoginBuilder.swift in Sources */,
+				8B73773224C9A38C009E202A /* LoginView.swift in Sources */,
 				8B73773024C96C93009E202A /* Extensions.swift in Sources */,
 				8B73772C24C96007009E202A /* LoginViewController.swift in Sources */,
 				8B73771A24C95FBA009E202A /* ViewController.swift in Sources */,
+				8B73773B24C9B0CE009E202A /* SignUpViewController.swift in Sources */,
+				8B73773424C9A564009E202A /* BaseView.swift in Sources */,
+				8B73773924C9B056009E202A /* LoginRouter.swift in Sources */,
+				8B73773624C9A8D8009E202A /* BaseViewController.swift in Sources */,
 				8B73771624C95FBA009E202A /* AppDelegate.swift in Sources */,
 				8B73771824C95FBA009E202A /* SceneDelegate.swift in Sources */,
 			);
