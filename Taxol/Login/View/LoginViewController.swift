@@ -11,32 +11,26 @@ import UIKit
 class LoginViewController: BaseViewController {
     
     let promptView = LoginView()
-    
-    ///Router
-    var router: LoginRouter!
 
     //MARK:- Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        view = promptView
-        promptView.delegate = self
         // Do any additional setup after loading the view.
-        setupView()
+        setupView()        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        configureNavBar(appering: .hide)
     }
     
     
     //MARK:- Setup layout
     func setupView() {
+        view = promptView
         view.backgroundColor = .backgroundColor
-        router.navigationController = navigationController
-        configureNavBar(appering: .hide)
+        promptView.router.navigationController = navigationController
+        
     }
 }
 
-extension LoginViewController: ButtonDidTapped {
-    func didTapped() {
-        router.routeToSignUp()
-    }
-    
-    
-}

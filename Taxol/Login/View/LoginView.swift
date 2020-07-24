@@ -40,13 +40,9 @@ final class LoginView: BaseView {
         return view
     }()
     
-    private let loginButton: UIButton = {
-        let button = UIButton(type: .system)
+    private let loginButton: AuthButton = {
+        let button = AuthButton(type: .system)
         button.setTitle("Logi in", for: .normal)
-        button.setTitleColor(UIColor(white: 1, alpha: 0.5), for: .normal)
-        button.backgroundColor = .mainBlueTintColor
-        button.layer.cornerRadius = 5
-        button.heightAnchor.constraint(equalToConstant: 50).isActive = true
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
         return button
     }()
@@ -70,6 +66,7 @@ final class LoginView: BaseView {
     }()
     
     override func createSubView() {
+        backgroundColor = UIColor.backgroundColor
         addSubview(titleLabel)
         titleLabel.anchor(top: safeAreaLayoutGuide.topAnchor, paddingTop: 40)
         titleLabel.centerXTo(view: self)
@@ -83,15 +80,10 @@ final class LoginView: BaseView {
         dontHaveAccountButton.anchor(left: leftAnchor, bottom: safeAreaLayoutGuide.bottomAnchor, right: rightAnchor, paddingLeft: 16, paddingBottom: 16, paddingRight: 16)
     }
     
-    //MARK:- Action / Selector
-    weak var delegate: ButtonDidTapped?
+    //MARK:- Action / Selector Button
+    var router: LoginRouter!
     
     @objc func handleShowSignUp() {
-        print(123)
-        delegate?.didTapped()
+        router.routeToSignUp()
     }
-}
-
-protocol ButtonDidTapped: class {
-    func didTapped()
 }

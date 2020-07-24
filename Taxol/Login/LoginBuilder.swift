@@ -13,7 +13,8 @@ final class LoginBuilder {
     func build() -> UIViewController {
         let view = buildView()
         let router = buildRouter()
-        view.router = router
+        //view.router = router
+        view.promptView.router = router
         return view
     }
     

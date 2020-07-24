@@ -8,6 +8,18 @@
 
 import UIKit
 
+extension UINavigationController: UIGestureRecognizerDelegate {
+
+    override open func viewDidLoad() {
+        super.viewDidLoad()
+        interactivePopGestureRecognizer?.delegate = self
+    }
+
+    public func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
+        return viewControllers.count > 1
+    }
+}
+
 extension UIView {
     func anchor(top: NSLayoutYAxisAnchor? = nil,
                 left: NSLayoutXAxisAnchor? = nil,
@@ -42,27 +54,36 @@ extension UIView {
         }
     }
     
-    func centerXTo(view: UIView) {
+    func centerXTo(view: UIView, constant: CGFloat = 0) {
         centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
     }
     
-    func centerYTo(view: UIView) {
+    func centerYTo(view: UIView, constant: CGFloat = 0) {
         centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
     }
     
-    func inputContainerView(image: UIImage, textField: UITextField) -> UIView {
+    func inputContainerView(image: UIImage, textField: UITextField? = nil, segment: UISegmentedControl? = nil) -> UIView {
         let view = UIView()
         
         let imageView = UIImageView()
         imageView.image = image
         imageView.alpha = 0.87
         view.addSubview(imageView)
-        imageView.centerYTo(view: view)
-        imageView.anchor(left: view.leftAnchor, paddingLeft: 8, width: 24, height: 24)
         
-        view.addSubview(textField)
-        textField.centerYTo(view: view)
-        textField.anchor(left: imageView.rightAnchor, right: view.rightAnchor, paddingLeft: 8, paddingRight: 16)
+        if let textField = textField {
+            imageView.centerYTo(view: view)
+            imageView.anchor(left: view.leftAnchor, paddingLeft: 8, width: 24, height: 24)
+            view.addSubview(textField)
+            textField.centerYTo(view: view)
+            textField.anchor(left: imageView.rightAnchor, right: view.rightAnchor, paddingLeft: 8, paddingRight: 16)
+        }
+        
+        if let sc = segment {
+            imageView.anchor(top: view.topAnchor, left: view.leftAnchor, paddingTop: -8, paddingLeft: 8, width: 24, height: 24)
+            view.addSubview(sc)
+            sc.anchor(left: view.leftAnchor, right: view.rightAnchor, paddingLeft: 8, paddingRight: 8)
+            sc.centerYTo(view: view, constant: 8)
+        }
         
         let separatorView = UIView()
         separatorView.backgroundColor = .lightGray

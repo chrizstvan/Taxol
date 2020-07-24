@@ -3,10 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B2D2FF424CA88A5007C7EBA /* AuthButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2D2FF324CA88A5007C7EBA /* AuthButton.swift */; };
+		8B2D2FF624CA98E8007C7EBA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8B2D2FF524CA98E8007C7EBA /* GoogleService-Info.plist */; };
+		8B2D2FF824CAA4CB007C7EBA /* SignUpInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2D2FF724CAA4CB007C7EBA /* SignUpInteractor.swift */; };
+		8B2D2FFA24CAB55F007C7EBA /* SignUpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2D2FF924CAB55F007C7EBA /* SignUpPresenter.swift */; };
+		8B2D2FFC24CAB745007C7EBA /* SignUpBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2D2FFB24CAB745007C7EBA /* SignUpBuilder.swift */; };
 		8B73771624C95FBA009E202A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B73771524C95FBA009E202A /* AppDelegate.swift */; };
 		8B73771824C95FBA009E202A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B73771724C95FBA009E202A /* SceneDelegate.swift */; };
 		8B73771A24C95FBA009E202A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B73771924C95FBA009E202A /* ViewController.swift */; };
@@ -21,9 +26,16 @@
 		8B73773924C9B056009E202A /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B73773824C9B056009E202A /* LoginRouter.swift */; };
 		8B73773B24C9B0CE009E202A /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B73773A24C9B0CE009E202A /* SignUpViewController.swift */; };
 		8B73773D24C9B1D3009E202A /* LoginBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B73773C24C9B1D3009E202A /* LoginBuilder.swift */; };
+		9B7FA36CE5BA4CE580EE86C5 /* Pods_Taxol.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD5189C15C9F436762A3D0F5 /* Pods_Taxol.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6E0F61C3AE79F203246294DC /* Pods-Taxol.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Taxol.debug.xcconfig"; path = "Target Support Files/Pods-Taxol/Pods-Taxol.debug.xcconfig"; sourceTree = "<group>"; };
+		8B2D2FF324CA88A5007C7EBA /* AuthButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthButton.swift; sourceTree = "<group>"; };
+		8B2D2FF524CA98E8007C7EBA /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		8B2D2FF724CAA4CB007C7EBA /* SignUpInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpInteractor.swift; sourceTree = "<group>"; };
+		8B2D2FF924CAB55F007C7EBA /* SignUpPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPresenter.swift; sourceTree = "<group>"; };
+		8B2D2FFB24CAB745007C7EBA /* SignUpBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpBuilder.swift; sourceTree = "<group>"; };
 		8B73771224C95FBA009E202A /* Taxol.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Taxol.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B73771524C95FBA009E202A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8B73771724C95FBA009E202A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -40,6 +52,8 @@
 		8B73773824C9B056009E202A /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
 		8B73773A24C9B0CE009E202A /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		8B73773C24C9B1D3009E202A /* LoginBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginBuilder.swift; sourceTree = "<group>"; };
+		ABC013E19B5B748BD5850F23 /* Pods-Taxol.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Taxol.release.xcconfig"; path = "Target Support Files/Pods-Taxol/Pods-Taxol.release.xcconfig"; sourceTree = "<group>"; };
+		BD5189C15C9F436762A3D0F5 /* Pods_Taxol.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Taxol.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,17 +61,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B7FA36CE5BA4CE580EE86C5 /* Pods_Taxol.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		001EC69A507798C0FC2F531F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BD5189C15C9F436762A3D0F5 /* Pods_Taxol.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8B2D2FF224CA8881007C7EBA /* SharedView */ = {
+			isa = PBXGroup;
+			children = (
+				8B2D2FF324CA88A5007C7EBA /* AuthButton.swift */,
+			);
+			path = SharedView;
+			sourceTree = "<group>";
+		};
 		8B73770924C95FBA009E202A = {
 			isa = PBXGroup;
 			children = (
 				8B73771424C95FBA009E202A /* Taxol */,
 				8B73771324C95FBA009E202A /* Products */,
+				AA66A576FE818ED48A560C45 /* Pods */,
+				001EC69A507798C0FC2F531F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -78,6 +111,7 @@
 				8B73771E24C95FC0009E202A /* Assets.xcassets */,
 				8B73772024C95FC0009E202A /* LaunchScreen.storyboard */,
 				8B73772324C95FC0009E202A /* Info.plist */,
+				8B2D2FF524CA98E8007C7EBA /* GoogleService-Info.plist */,
 			);
 			path = Taxol;
 			sourceTree = "<group>";
@@ -85,9 +119,9 @@
 		8B73772924C95FD7009E202A /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				8B73772A24C95FE7009E202A /* View */,
-				8B73773824C9B056009E202A /* LoginRouter.swift */,
 				8B73773C24C9B1D3009E202A /* LoginBuilder.swift */,
+				8B73773824C9B056009E202A /* LoginRouter.swift */,
+				8B73772A24C95FE7009E202A /* View */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -104,6 +138,7 @@
 		8B73772D24C967F7009E202A /* App Coordinator */ = {
 			isa = PBXGroup;
 			children = (
+				8B2D2FF224CA8881007C7EBA /* SharedView */,
 				8B73772E24C96C78009E202A /* Utils */,
 				8B73771524C95FBA009E202A /* AppDelegate.swift */,
 				8B73771724C95FBA009E202A /* SceneDelegate.swift */,
@@ -126,9 +161,21 @@
 		8B73773724C9AFF6009E202A /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
+				8B2D2FFB24CAB745007C7EBA /* SignUpBuilder.swift */,
+				8B2D2FF724CAA4CB007C7EBA /* SignUpInteractor.swift */,
+				8B2D2FF924CAB55F007C7EBA /* SignUpPresenter.swift */,
 				8B73773A24C9B0CE009E202A /* SignUpViewController.swift */,
 			);
 			path = SignUp;
+			sourceTree = "<group>";
+		};
+		AA66A576FE818ED48A560C45 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6E0F61C3AE79F203246294DC /* Pods-Taxol.debug.xcconfig */,
+				ABC013E19B5B748BD5850F23 /* Pods-Taxol.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +185,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8B73772624C95FC0009E202A /* Build configuration list for PBXNativeTarget "Taxol" */;
 			buildPhases = (
+				FFC3B7A3DFDE53E37B3E078D /* [CP] Check Pods Manifest.lock */,
 				8B73770E24C95FBA009E202A /* Sources */,
 				8B73770F24C95FBA009E202A /* Frameworks */,
 				8B73771024C95FBA009E202A /* Resources */,
+				92FE9A3EDC316F1B00DC1CE6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -190,6 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B73772224C95FC0009E202A /* LaunchScreen.storyboard in Resources */,
+				8B2D2FF624CA98E8007C7EBA /* GoogleService-Info.plist in Resources */,
 				8B73771F24C95FC0009E202A /* Assets.xcassets in Resources */,
 				8B73771D24C95FBA009E202A /* Main.storyboard in Resources */,
 			);
@@ -197,19 +247,65 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		92FE9A3EDC316F1B00DC1CE6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Taxol/Pods-Taxol-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Taxol/Pods-Taxol-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Taxol/Pods-Taxol-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FFC3B7A3DFDE53E37B3E078D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Taxol-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8B73770E24C95FBA009E202A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B2D2FF824CAA4CB007C7EBA /* SignUpInteractor.swift in Sources */,
 				8B73773D24C9B1D3009E202A /* LoginBuilder.swift in Sources */,
+				8B2D2FF424CA88A5007C7EBA /* AuthButton.swift in Sources */,
 				8B73773224C9A38C009E202A /* LoginView.swift in Sources */,
+				8B2D2FFA24CAB55F007C7EBA /* SignUpPresenter.swift in Sources */,
 				8B73773024C96C93009E202A /* Extensions.swift in Sources */,
 				8B73772C24C96007009E202A /* LoginViewController.swift in Sources */,
 				8B73771A24C95FBA009E202A /* ViewController.swift in Sources */,
 				8B73773B24C9B0CE009E202A /* SignUpViewController.swift in Sources */,
 				8B73773424C9A564009E202A /* BaseView.swift in Sources */,
 				8B73773924C9B056009E202A /* LoginRouter.swift in Sources */,
+				8B2D2FFC24CAB745007C7EBA /* SignUpBuilder.swift in Sources */,
 				8B73773624C9A8D8009E202A /* BaseViewController.swift in Sources */,
 				8B73771624C95FBA009E202A /* AppDelegate.swift in Sources */,
 				8B73771824C95FBA009E202A /* SceneDelegate.swift in Sources */,
@@ -354,6 +450,7 @@
 		};
 		8B73772724C95FC0009E202A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6E0F61C3AE79F203246294DC /* Pods-Taxol.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -372,6 +469,7 @@
 		};
 		8B73772824C95FC0009E202A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ABC013E19B5B748BD5850F23 /* Pods-Taxol.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
