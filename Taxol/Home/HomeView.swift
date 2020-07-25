@@ -14,7 +14,6 @@ class HomeView: BaseView {
     let mapView = MKMapView()
 
     override func createSubView() {
-        super.createSubView()
         addSubview(mapView)
         mapView.frame = self.frame
     }

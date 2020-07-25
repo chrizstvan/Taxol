@@ -12,6 +12,9 @@ import MapKit
 
 class HomeViewController: BaseViewController {
 
+    ///interactor
+    var interactor: HomeInteractorProtocol!
+    
     //let promptView = HomeView()
     let mapView = MKMapView()
     
@@ -32,7 +35,15 @@ class HomeViewController: BaseViewController {
     //MARK:- Setup view
     func configureView() {
         //view = promptView
+        configureMapView()
+    }
+    
+    func configureMapView() {
+        view.addSubview(mapView)
         mapView.frame = view.frame
+        interactor.chekLocationAuth()
+        mapView.showsUserLocation = true
+        mapView.userTrackingMode = .follow
     }
     
     //MARK:- Chek login logout
