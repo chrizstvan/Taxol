@@ -12,6 +12,8 @@
 		8B2D2FF824CAA4CB007C7EBA /* SignUpInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2D2FF724CAA4CB007C7EBA /* SignUpInteractor.swift */; };
 		8B2D2FFA24CAB55F007C7EBA /* SignUpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2D2FF924CAB55F007C7EBA /* SignUpPresenter.swift */; };
 		8B2D2FFC24CAB745007C7EBA /* SignUpBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2D2FFB24CAB745007C7EBA /* SignUpBuilder.swift */; };
+		8B2D2FFE24CAE6CC007C7EBA /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2D2FFD24CAE6CC007C7EBA /* LoginInteractor.swift */; };
+		8B2D300124CB214E007C7EBA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2D300024CB214E007C7EBA /* HomeViewController.swift */; };
 		8B73771624C95FBA009E202A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B73771524C95FBA009E202A /* AppDelegate.swift */; };
 		8B73771824C95FBA009E202A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B73771724C95FBA009E202A /* SceneDelegate.swift */; };
 		8B73771A24C95FBA009E202A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B73771924C95FBA009E202A /* ViewController.swift */; };
@@ -26,6 +28,11 @@
 		8B73773924C9B056009E202A /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B73773824C9B056009E202A /* LoginRouter.swift */; };
 		8B73773B24C9B0CE009E202A /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B73773A24C9B0CE009E202A /* SignUpViewController.swift */; };
 		8B73773D24C9B1D3009E202A /* LoginBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B73773C24C9B1D3009E202A /* LoginBuilder.swift */; };
+		8B9EE01224CBCEB700F0490D /* SignUpModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9EE01124CBCEB700F0490D /* SignUpModel.swift */; };
+		8B9EE01424CBD92600F0490D /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9EE01324CBD92600F0490D /* LoginModel.swift */; };
+		8B9EE01624CBDB1900F0490D /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9EE01524CBDB1900F0490D /* HomeView.swift */; };
+		8B9EE01824CBE66F00F0490D /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9EE01724CBE66F00F0490D /* LoginPresenter.swift */; };
+		8B9EE01A24CBEBE400F0490D /* SignUpViewController+ViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9EE01924CBEBE400F0490D /* SignUpViewController+ViewProtocol.swift */; };
 		9B7FA36CE5BA4CE580EE86C5 /* Pods_Taxol.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD5189C15C9F436762A3D0F5 /* Pods_Taxol.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +43,8 @@
 		8B2D2FF724CAA4CB007C7EBA /* SignUpInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpInteractor.swift; sourceTree = "<group>"; };
 		8B2D2FF924CAB55F007C7EBA /* SignUpPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPresenter.swift; sourceTree = "<group>"; };
 		8B2D2FFB24CAB745007C7EBA /* SignUpBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpBuilder.swift; sourceTree = "<group>"; };
+		8B2D2FFD24CAE6CC007C7EBA /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
+		8B2D300024CB214E007C7EBA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		8B73771224C95FBA009E202A /* Taxol.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Taxol.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B73771524C95FBA009E202A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8B73771724C95FBA009E202A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -52,6 +61,11 @@
 		8B73773824C9B056009E202A /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
 		8B73773A24C9B0CE009E202A /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		8B73773C24C9B1D3009E202A /* LoginBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginBuilder.swift; sourceTree = "<group>"; };
+		8B9EE01124CBCEB700F0490D /* SignUpModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpModel.swift; sourceTree = "<group>"; };
+		8B9EE01324CBD92600F0490D /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		8B9EE01524CBDB1900F0490D /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		8B9EE01724CBE66F00F0490D /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		8B9EE01924CBEBE400F0490D /* SignUpViewController+ViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignUpViewController+ViewProtocol.swift"; sourceTree = "<group>"; };
 		ABC013E19B5B748BD5850F23 /* Pods-Taxol.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Taxol.release.xcconfig"; path = "Target Support Files/Pods-Taxol/Pods-Taxol.release.xcconfig"; sourceTree = "<group>"; };
 		BD5189C15C9F436762A3D0F5 /* Pods_Taxol.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Taxol.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -84,6 +98,15 @@
 			path = SharedView;
 			sourceTree = "<group>";
 		};
+		8B2D2FFF24CB2128007C7EBA /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				8B9EE01524CBDB1900F0490D /* HomeView.swift */,
+				8B2D300024CB214E007C7EBA /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		8B73770924C95FBA009E202A = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +128,7 @@
 		8B73771424C95FBA009E202A /* Taxol */ = {
 			isa = PBXGroup;
 			children = (
+				8B2D2FFF24CB2128007C7EBA /* Home */,
 				8B73773724C9AFF6009E202A /* SignUp */,
 				8B73772924C95FD7009E202A /* Login */,
 				8B73772D24C967F7009E202A /* App Coordinator */,
@@ -120,7 +144,10 @@
 			isa = PBXGroup;
 			children = (
 				8B73773C24C9B1D3009E202A /* LoginBuilder.swift */,
+				8B9EE01324CBD92600F0490D /* LoginModel.swift */,
 				8B73773824C9B056009E202A /* LoginRouter.swift */,
+				8B2D2FFD24CAE6CC007C7EBA /* LoginInteractor.swift */,
+				8B9EE01724CBE66F00F0490D /* LoginPresenter.swift */,
 				8B73772A24C95FE7009E202A /* View */,
 			);
 			path = Login;
@@ -162,9 +189,11 @@
 			isa = PBXGroup;
 			children = (
 				8B2D2FFB24CAB745007C7EBA /* SignUpBuilder.swift */,
+				8B9EE01124CBCEB700F0490D /* SignUpModel.swift */,
 				8B2D2FF724CAA4CB007C7EBA /* SignUpInteractor.swift */,
 				8B2D2FF924CAB55F007C7EBA /* SignUpPresenter.swift */,
 				8B73773A24C9B0CE009E202A /* SignUpViewController.swift */,
+				8B9EE01924CBEBE400F0490D /* SignUpViewController+ViewProtocol.swift */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
@@ -294,17 +323,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B9EE01424CBD92600F0490D /* LoginModel.swift in Sources */,
 				8B2D2FF824CAA4CB007C7EBA /* SignUpInteractor.swift in Sources */,
 				8B73773D24C9B1D3009E202A /* LoginBuilder.swift in Sources */,
 				8B2D2FF424CA88A5007C7EBA /* AuthButton.swift in Sources */,
+				8B9EE01224CBCEB700F0490D /* SignUpModel.swift in Sources */,
+				8B2D300124CB214E007C7EBA /* HomeViewController.swift in Sources */,
 				8B73773224C9A38C009E202A /* LoginView.swift in Sources */,
+				8B2D2FFE24CAE6CC007C7EBA /* LoginInteractor.swift in Sources */,
 				8B2D2FFA24CAB55F007C7EBA /* SignUpPresenter.swift in Sources */,
+				8B9EE01824CBE66F00F0490D /* LoginPresenter.swift in Sources */,
 				8B73773024C96C93009E202A /* Extensions.swift in Sources */,
 				8B73772C24C96007009E202A /* LoginViewController.swift in Sources */,
 				8B73771A24C95FBA009E202A /* ViewController.swift in Sources */,
 				8B73773B24C9B0CE009E202A /* SignUpViewController.swift in Sources */,
+				8B9EE01624CBDB1900F0490D /* HomeView.swift in Sources */,
 				8B73773424C9A564009E202A /* BaseView.swift in Sources */,
 				8B73773924C9B056009E202A /* LoginRouter.swift in Sources */,
+				8B9EE01A24CBEBE400F0490D /* SignUpViewController+ViewProtocol.swift in Sources */,
 				8B2D2FFC24CAB745007C7EBA /* SignUpBuilder.swift in Sources */,
 				8B73773624C9A8D8009E202A /* BaseViewController.swift in Sources */,
 				8B73771624C95FBA009E202A /* AppDelegate.swift in Sources */,

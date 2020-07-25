@@ -8,8 +8,12 @@
 
 import UIKit
 
+protocol LoginViewProtocol: class {
+    func displaySuccess()
+    func displayFailed(msg: Error?)
+}
+
 final class LoginView: BaseView {
-   
     
     //MARK:- Properties
     private let titleLabel: UILabel = {
@@ -44,6 +48,7 @@ final class LoginView: BaseView {
         let button = AuthButton(type: .system)
         button.setTitle("Logi in", for: .normal)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
+        button.addTarget(self, action: #selector(handleLogin), for: .touchUpInside)
         return button
     }()
     
@@ -82,6 +87,13 @@ final class LoginView: BaseView {
     
     //MARK:- Action / Selector Button
     var router: LoginRouter!
+    var interactor: LoginInteractorProtocol!
+    
+    @objc func handleLogin() {
+        guard let email = emailTextField.text else { return }
+        guard let password = passwordTextField.text else { return }
+        interactor.login(request: LoginModel.Request(loginForm: LoginModel.LoginForm(email: email, password: password)))
+    }
     
     @objc func handleShowSignUp() {
         router.routeToSignUp()

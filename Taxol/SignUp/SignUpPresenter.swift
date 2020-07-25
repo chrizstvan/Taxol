@@ -10,12 +10,19 @@ import Foundation
 
 protocol SignUpPresenterProtocol {
     func didUpdateDataBase()
+    func didFailedUpdateDataBase(error: Error?)
 }
 
 final class SignUpPresenter: SignUpPresenterProtocol {
     
+    weak var view: SignUpViewProtocol?
+    
+    func didFailedUpdateDataBase(error: Error?) {
+        view?.failedSignUp(error: error)
+    }
+    
     func didUpdateDataBase() {
-        print("success to update database...")
+        view?.successSignUp()
     }
     
 }

@@ -17,6 +17,7 @@ final class SignUpBuilder {
         
         view.interactor = interactor
         interactor.presenter = presenter
+        presenter.view = view
         
         return view
     }

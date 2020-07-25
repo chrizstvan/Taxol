@@ -34,3 +34,17 @@ class LoginViewController: BaseViewController {
     }
 }
 
+extension LoginViewController: LoginViewProtocol {
+    func displaySuccess() {
+        print("login success")
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    func displayFailed(msg: Error?) {
+        guard let msg = msg else { return }
+        print(msg.localizedDescription)
+    }
+    
+    
+}
+

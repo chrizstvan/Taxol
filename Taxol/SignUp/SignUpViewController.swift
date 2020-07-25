@@ -131,7 +131,9 @@ class SignUpViewController: BaseViewController {
         guard let email = emailTextField.text else { return }
         guard let fullname = fullNameTextField.text else { return }
         guard let password = passwordTextField.text else { return }
+        let userType = userSegment.selectedSegmentIndex > 0 ? "Driver" : "Rider"
+        let request = SignUpModel.CreateUser.Request(userForm: SignUpModel.UserFormField(email: email, fullname: fullname, password: password, userType: userType))
         
-        interactor.postSignUpData(email: email, fullName: fullname, password: password, userIndex: userSegment.selectedSegmentIndex)
+        interactor.postSignUpData(request: request)
     }
 }

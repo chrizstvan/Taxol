@@ -10,25 +10,25 @@ import Foundation
 import Firebase
 
 protocol SignUpInteractorPrototcol {
-    func postSignUpData(email: String, fullName: String, password: String, userIndex: Int)
+    func postSignUpData(request: SignUpModel.CreateUser.Request)
 }
 
 final class SignUpInteractor: SignUpInteractorPrototcol {
     
     var presenter: SignUpPresenterProtocol!
     
-    func postSignUpData(email: String, fullName: String, password: String, userIndex: Int) {
-        
-        let userType = userIndex > 0 ? "Driver" : "Rider"
-        Auth.auth().createUser(withEmail: email, password: password) { (result, error) in
+    func postSignUpData(request: SignUpModel.CreateUser.Request) {
+        Auth.auth().createUser(withEmail: request.userForm.email, password: request.userForm.password) { (result, error) in
             if let error = error {
-                print("Failed to register user \(error)")
+                self.presenter.didFailedUpdateDataBase(error: error)
                 return
             }
             
             guard let uid = result?.user.uid else { return }
             
-            let value = ["email": email, "Fullname": fullName, "userType": userType]
+            let value = ["email": request.userForm.email,
+                         "Fullname": request.userForm.fullname,
+                         "userType": request.userForm.userType]
             
             Database.database().reference().child("users").child(uid).updateChildValues(value) { (error, ref) in
                 self.presenter.didUpdateDataBase()
