@@ -37,6 +37,10 @@
 		8B9EE01F24CBFFB200F0490D /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9EE01E24CBFFB200F0490D /* HomeInteractor.swift */; };
 		8B9EE02124CBFFC000F0490D /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9EE02024CBFFC000F0490D /* HomePresenter.swift */; };
 		8B9EE02324CBFFCF00F0490D /* HomeBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9EE02224CBFFCF00F0490D /* HomeBuilder.swift */; };
+		8B9EE02624CD535B00F0490D /* InputActivationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9EE02524CD535B00F0490D /* InputActivationView.swift */; };
+		8B9EE02824CE799600F0490D /* LocationInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9EE02724CE799600F0490D /* LocationInputView.swift */; };
+		8B9EE02A24CE9F5D00F0490D /* HomeViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9EE02924CE9F5D00F0490D /* HomeViewController+TableView.swift */; };
+		8B9EE02D24CEA15800F0490D /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9EE02C24CEA15800F0490D /* LocationCell.swift */; };
 		9B7FA36CE5BA4CE580EE86C5 /* Pods_Taxol.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD5189C15C9F436762A3D0F5 /* Pods_Taxol.framework */; };
 /* End PBXBuildFile section */
 
@@ -74,6 +78,10 @@
 		8B9EE01E24CBFFB200F0490D /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
 		8B9EE02024CBFFC000F0490D /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		8B9EE02224CBFFCF00F0490D /* HomeBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBuilder.swift; sourceTree = "<group>"; };
+		8B9EE02524CD535B00F0490D /* InputActivationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputActivationView.swift; sourceTree = "<group>"; };
+		8B9EE02724CE799600F0490D /* LocationInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationInputView.swift; sourceTree = "<group>"; };
+		8B9EE02924CE9F5D00F0490D /* HomeViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController+TableView.swift"; sourceTree = "<group>"; };
+		8B9EE02C24CEA15800F0490D /* LocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
 		ABC013E19B5B748BD5850F23 /* Pods-Taxol.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Taxol.release.xcconfig"; path = "Target Support Files/Pods-Taxol/Pods-Taxol.release.xcconfig"; sourceTree = "<group>"; };
 		BD5189C15C9F436762A3D0F5 /* Pods_Taxol.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Taxol.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -113,7 +121,7 @@
 				8B9EE02024CBFFC000F0490D /* HomePresenter.swift */,
 				8B9EE01E24CBFFB200F0490D /* HomeInteractor.swift */,
 				8B9EE01524CBDB1900F0490D /* HomeView.swift */,
-				8B2D300024CB214E007C7EBA /* HomeViewController.swift */,
+				8B9EE02424CD531100F0490D /* View */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -216,6 +224,26 @@
 				8B9EE01C24CBFE7000F0490D /* LocationWorker.swift */,
 			);
 			path = Workers;
+			sourceTree = "<group>";
+		};
+		8B9EE02424CD531100F0490D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8B9EE02B24CEA13400F0490D /* Cells */,
+				8B9EE02524CD535B00F0490D /* InputActivationView.swift */,
+				8B9EE02724CE799600F0490D /* LocationInputView.swift */,
+				8B2D300024CB214E007C7EBA /* HomeViewController.swift */,
+				8B9EE02924CE9F5D00F0490D /* HomeViewController+TableView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8B9EE02B24CEA13400F0490D /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				8B9EE02C24CEA15800F0490D /* LocationCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		AA66A576FE818ED48A560C45 /* Pods */ = {
@@ -349,10 +377,13 @@
 				8B9EE01F24CBFFB200F0490D /* HomeInteractor.swift in Sources */,
 				8B2D2FF424CA88A5007C7EBA /* AuthButton.swift in Sources */,
 				8B9EE01224CBCEB700F0490D /* SignUpModel.swift in Sources */,
+				8B9EE02D24CEA15800F0490D /* LocationCell.swift in Sources */,
+				8B9EE02824CE799600F0490D /* LocationInputView.swift in Sources */,
 				8B2D300124CB214E007C7EBA /* HomeViewController.swift in Sources */,
 				8B73773224C9A38C009E202A /* LoginView.swift in Sources */,
 				8B9EE01D24CBFE7000F0490D /* LocationWorker.swift in Sources */,
 				8B2D2FFE24CAE6CC007C7EBA /* LoginInteractor.swift in Sources */,
+				8B9EE02624CD535B00F0490D /* InputActivationView.swift in Sources */,
 				8B2D2FFA24CAB55F007C7EBA /* SignUpPresenter.swift in Sources */,
 				8B9EE01824CBE66F00F0490D /* LoginPresenter.swift in Sources */,
 				8B73773024C96C93009E202A /* Extensions.swift in Sources */,
@@ -361,6 +392,7 @@
 				8B73772C24C96007009E202A /* LoginViewController.swift in Sources */,
 				8B73771A24C95FBA009E202A /* ViewController.swift in Sources */,
 				8B73773B24C9B0CE009E202A /* SignUpViewController.swift in Sources */,
+				8B9EE02A24CE9F5D00F0490D /* HomeViewController+TableView.swift in Sources */,
 				8B9EE01624CBDB1900F0490D /* HomeView.swift in Sources */,
 				8B73773424C9A564009E202A /* BaseView.swift in Sources */,
 				8B73773924C9B056009E202A /* LoginRouter.swift in Sources */,

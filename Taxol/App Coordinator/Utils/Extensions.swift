@@ -54,12 +54,31 @@ extension UIView {
         }
     }
     
-    func centerXTo(view: UIView, constant: CGFloat = 0) {
-        centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+    func centerXTo(view: UIView,
+                   constant: CGFloat = 0,
+                   topAnchor: NSLayoutYAxisAnchor? = nil,
+                   topPadding: CGFloat = 0,
+                   bottomAnchor: NSLayoutYAxisAnchor? = nil,
+                   bottomPadding: CGFloat = 0) {
+        translatesAutoresizingMaskIntoConstraints = false
+        centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: constant).isActive = true
+        
     }
     
-    func centerYTo(view: UIView, constant: CGFloat = 0) {
-        centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+    func centerYTo(view: UIView,
+                   constant: CGFloat = 0,
+                   leftAnchor: NSLayoutXAxisAnchor? = nil,
+                   leftPadding: CGFloat = 0,
+                   rightAnchor: NSLayoutXAxisAnchor? = nil,
+                   rightPadding: CGFloat = 0) {
+        translatesAutoresizingMaskIntoConstraints = false
+        centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: constant).isActive = true
+        if let left = leftAnchor {
+            anchor(left: left, paddingLeft: leftPadding)
+        }
+        if let right = rightAnchor {
+            anchor(right: right, paddingRight: rightPadding)
+        }
     }
     
     func inputContainerView(image: UIImage, textField: UITextField? = nil, segment: UISegmentedControl? = nil) -> UIView {
@@ -91,6 +110,49 @@ extension UIView {
         separatorView.anchor(left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, paddingLeft: 8, height: 0.75)
         
         return view
+    }
+    
+    func addCorneredBorder(borderWidth:CGFloat,borderColor:UIColor, radius: CGFloat){
+        self.layer.borderWidth = borderWidth
+        self.layer.masksToBounds = false
+        self.layer.borderColor = borderColor.cgColor
+        self.layer.cornerRadius = radius
+        self.clipsToBounds = true
+    }
+    
+    func circleIt(){
+        self.layer.masksToBounds = false
+        self.layer.cornerRadius = self.frame.size.height/2
+        self.clipsToBounds = true
+        
+    }
+    
+    func circleWithBorder(width: CGFloat, borderColor: CGColor) {
+        self.layer.borderWidth = width
+        self.layer.masksToBounds = false
+        self.layer.borderColor = borderColor
+        self.layer.cornerRadius = self.frame.height / 2
+        self.clipsToBounds = true
+    }
+    
+    func dropShadow() {
+        
+        self.layer.masksToBounds = false
+        self.layer.shadowColor = UIColor.black.cgColor
+        self.layer.shadowOpacity = 0.5
+        self.layer.shadowOffset = CGSize(width: 0, height: 1)
+        self.layer.shadowRadius = 2
+        
+        self.layer.rasterizationScale = UIScreen.main.scale
+        self.layer.shouldRasterize = true
+        
+    }
+    
+    func addShadow() {
+        layer.shadowColor = UIColor.black.cgColor
+        layer.shadowOpacity = 0.45
+        layer.shadowOffset = CGSize(width: 0.5, height: 0.5)
+        layer.masksToBounds = false
     }
 }
 
