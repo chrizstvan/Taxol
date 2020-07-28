@@ -11,10 +11,16 @@ import MapKit
 
 final class LocationWorker: NSObject {
     
-    private let locationManager = CLLocationManager()
+    static let shared = LocationWorker()
+    var locationManager = CLLocationManager()
+    
+    override init() {
+        super.init()
+        self.locationManager = CLLocationManager()
+        self.locationManager.delegate = self
+    }
     
     func enableLocationServices() {
-        locationManager.delegate = self
         
         switch CLLocationManager.authorizationStatus() {
         case .notDetermined:

@@ -14,9 +14,12 @@ final class HomeBuilder {
         let view = buildView()
         let interactor = buildInteractor()
         let locationWorker = buildLocationWorker()
+        let presenter = buildPresenter()
         
         view.interactor = interactor
         interactor.locationWorker = locationWorker
+        interactor.presenter = presenter
+        presenter.view = view
         
         return view
     }
@@ -31,9 +34,13 @@ final class HomeBuilder {
         return HomeInteractor()
     }
     
+    //MARK:- Presenter
+    private func buildPresenter() -> HomePresenter {
+        return HomePresenter()
+    }
     
     //MARK:- Worker
     private func buildLocationWorker() -> LocationWorker {
-        return LocationWorker()
+        return LocationWorker.shared
     }
 }

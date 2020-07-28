@@ -10,6 +10,11 @@ import UIKit
 import Firebase
 import MapKit
 
+protocol HomeViewProtocol: class {
+    func userNotLogin(nav: UINavigationController)
+    func loadUser(user: HomeModel.ViewModel)
+}
+
 class HomeViewController: BaseViewController {
 
     ///interactor
@@ -26,13 +31,15 @@ class HomeViewController: BaseViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         navigationController?.navigationBar.barStyle = .default
-        chekIfUserLoggedIn()
+        configureView()
         //signOut()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         configureNavBar(appering: .hide)
+        fetchUserDataFromService()
+        fetchDriverNearBy()
     }
     
     //MARK:- Setup view
@@ -101,25 +108,40 @@ class HomeViewController: BaseViewController {
         }
     }
         
-    //MARK:- Chek login logout
-    func chekIfUserLoggedIn() {
-        if Auth.auth().currentUser?.uid == nil {
-            let nav = UINavigationController(rootViewController: LoginBuilder().build())
-            nav.modalPresentationStyle = .fullScreen
-            self.present(nav, animated: true, completion: nil)
-            
-        } else {
-            print("user id is : \(Auth.auth().currentUser?.uid)")
-            configureView()
-        }
-    }
+    //MARK:- logout for test purposes
     
     func signOut() {
         do {
             try Auth.auth().signOut()
+            let nav = UINavigationController(rootViewController: LoginBuilder().build())
+            nav.modalPresentationStyle = .fullScreen
+            self.present(nav, animated: true, completion: nil)
         } catch {
             print("Error sign out")
         }
     }
 
+}
+
+extension HomeViewController: HomeViewProtocol {
+    func userNotLogin(nav: UINavigationController) {
+        self.present(nav, animated: true, completion: nil)
+    }
+    
+    private func fetchUserDataFromService() {
+        interactor.loginCheck()
+    }
+    
+    private func fetchDriverNearBy() {
+        interactor.getDriverData(radius: 50)
+    }
+    
+    func loadUser(user: HomeModel.ViewModel) {
+        //configureView()
+        DispatchQueue.main.async {
+            self.locationInputView.userVM = user
+        }
+    }
+    
+    
 }

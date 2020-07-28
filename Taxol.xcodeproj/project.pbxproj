@@ -41,6 +41,9 @@
 		8B9EE02824CE799600F0490D /* LocationInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9EE02724CE799600F0490D /* LocationInputView.swift */; };
 		8B9EE02A24CE9F5D00F0490D /* HomeViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9EE02924CE9F5D00F0490D /* HomeViewController+TableView.swift */; };
 		8B9EE02D24CEA15800F0490D /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9EE02C24CEA15800F0490D /* LocationCell.swift */; };
+		8B9EE03024CEEB3B00F0490D /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9EE02F24CEEB3B00F0490D /* ServiceManager.swift */; };
+		8B9EE03324CEF31400F0490D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9EE03224CEF31400F0490D /* User.swift */; };
+		8B9EE03524CFCDC500F0490D /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9EE03424CFCDC500F0490D /* HomeModel.swift */; };
 		9B7FA36CE5BA4CE580EE86C5 /* Pods_Taxol.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD5189C15C9F436762A3D0F5 /* Pods_Taxol.framework */; };
 /* End PBXBuildFile section */
 
@@ -82,6 +85,9 @@
 		8B9EE02724CE799600F0490D /* LocationInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationInputView.swift; sourceTree = "<group>"; };
 		8B9EE02924CE9F5D00F0490D /* HomeViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController+TableView.swift"; sourceTree = "<group>"; };
 		8B9EE02C24CEA15800F0490D /* LocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
+		8B9EE02F24CEEB3B00F0490D /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
+		8B9EE03224CEF31400F0490D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		8B9EE03424CFCDC500F0490D /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		ABC013E19B5B748BD5850F23 /* Pods-Taxol.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Taxol.release.xcconfig"; path = "Target Support Files/Pods-Taxol/Pods-Taxol.release.xcconfig"; sourceTree = "<group>"; };
 		BD5189C15C9F436762A3D0F5 /* Pods_Taxol.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Taxol.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -118,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				8B9EE02224CBFFCF00F0490D /* HomeBuilder.swift */,
+				8B9EE03424CFCDC500F0490D /* HomeModel.swift */,
 				8B9EE02024CBFFC000F0490D /* HomePresenter.swift */,
 				8B9EE01E24CBFFB200F0490D /* HomeInteractor.swift */,
 				8B9EE01524CBDB1900F0490D /* HomeView.swift */,
@@ -184,6 +191,8 @@
 		8B73772D24C967F7009E202A /* App Coordinator */ = {
 			isa = PBXGroup;
 			children = (
+				8B9EE03124CEF30000F0490D /* Models */,
+				8B9EE02E24CEEB2200F0490D /* Services */,
 				8B9EE01B24CBFE5800F0490D /* Workers */,
 				8B2D2FF224CA8881007C7EBA /* SharedView */,
 				8B73772E24C96C78009E202A /* Utils */,
@@ -244,6 +253,22 @@
 				8B9EE02C24CEA15800F0490D /* LocationCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		8B9EE02E24CEEB2200F0490D /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				8B9EE02F24CEEB3B00F0490D /* ServiceManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		8B9EE03124CEF30000F0490D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8B9EE03224CEF31400F0490D /* User.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		AA66A576FE818ED48A560C45 /* Pods */ = {
@@ -373,10 +398,13 @@
 			files = (
 				8B9EE01424CBD92600F0490D /* LoginModel.swift in Sources */,
 				8B2D2FF824CAA4CB007C7EBA /* SignUpInteractor.swift in Sources */,
+				8B9EE03524CFCDC500F0490D /* HomeModel.swift in Sources */,
 				8B73773D24C9B1D3009E202A /* LoginBuilder.swift in Sources */,
 				8B9EE01F24CBFFB200F0490D /* HomeInteractor.swift in Sources */,
+				8B9EE03324CEF31400F0490D /* User.swift in Sources */,
 				8B2D2FF424CA88A5007C7EBA /* AuthButton.swift in Sources */,
 				8B9EE01224CBCEB700F0490D /* SignUpModel.swift in Sources */,
+				8B9EE03024CEEB3B00F0490D /* ServiceManager.swift in Sources */,
 				8B9EE02D24CEA15800F0490D /* LocationCell.swift in Sources */,
 				8B9EE02824CE799600F0490D /* LocationInputView.swift in Sources */,
 				8B2D300124CB214E007C7EBA /* HomeViewController.swift in Sources */,

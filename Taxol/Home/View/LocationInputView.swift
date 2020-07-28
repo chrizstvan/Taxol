@@ -9,6 +9,15 @@
 import UIKit
 
 class LocationInputView: BaseView {
+    
+    ///view model
+    var userVM: HomeModel.ViewModel? {
+        didSet {
+            guard let user = userVM else { return }
+            titleLabel.text = user.fullname
+            
+        }
+    }
 
     private let backButton: UIButton = {
         let button = UIButton(type: .system)
