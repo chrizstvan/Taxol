@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MapKit
 
 extension UINavigationController: UIGestureRecognizerDelegate {
 
@@ -176,4 +177,17 @@ extension UIColor {
     
     static let backgroundColor = rgb(red: 25, green: 25, blue: 25)
     static let mainBlueTintColor = rgb(red: 17, green: 154, blue: 237)
+}
+
+extension MKPlacemark {
+    var address: String? {
+        get {
+            guard let subThoroughFare = subThoroughfare else { return nil }
+            guard let thoroughFare = thoroughfare else { return nil }
+            guard let locality = locality else { return nil }
+            guard let adminArea = administrativeArea else { return nil}
+            
+            return "\(subThoroughFare) \(thoroughFare), \(locality), \(adminArea)"
+        }
+    }
 }

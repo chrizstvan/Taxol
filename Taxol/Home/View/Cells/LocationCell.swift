@@ -10,6 +10,15 @@ import UIKit
 
 class LocationCell: UITableViewCell {
     
+    ///data
+    var placemark: SearchLocationModel.ViewModel? {
+        didSet {
+            guard let placemark = placemark else { return }
+            title.text = placemark.title
+            subtitle.text = placemark.subtitle
+        }
+    }
+    
     private let title: UILabel = {
         let label = UILabel()
         label.text = "123 Main Street"

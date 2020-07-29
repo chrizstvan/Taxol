@@ -14,6 +14,7 @@ protocol HomeInteractorProtocol {
     func loginCheck()
     func chekLocationAuth()
     func getDriverData(mapView: MKMapView, radius: Double)
+    func searchLocationBy(mapView: MKMapView, naturalLangQuery: SearchLocationModel.Request)
 }
 
 final class HomeInteractor: HomeInteractorProtocol {
@@ -64,6 +65,27 @@ final class HomeInteractor: HomeInteractorProtocol {
             if !driverIsVisible {
                 self.presenter.getDriverAnnotation(mapView: mapView, annotation: annotation)
             }
+        }
+    }
+    
+    func searchLocationBy(mapView: MKMapView, naturalLangQuery: SearchLocationModel.Request) {
+        var result = [MKPlacemark]()
+        let request = MKLocalSearch.Request()
+        request.region = mapView.region
+        request.naturalLanguageQuery = naturalLangQuery.query
+        
+        let search = MKLocalSearch(request: request)
+        search.start { (response, error) in
+            if let _ = error {
+                print("error search location by")
+                return
+            }
+            
+            guard let response = response else { return }
+            response.mapItems.forEach { (item) in
+                result.append(item.placemark)
+            }
+            self.presenter.didFoundLocation(response: SearchLocationModel.Response(placemarks: result))
         }
     }
     

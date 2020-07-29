@@ -14,6 +14,7 @@ protocol HomeViewProtocol: class {
     func userNotLogin(nav: UINavigationController)
     func loadUser(user: HomeModel.ViewModel)
     func showingDriverAnnotation(mapView: MKMapView)
+    func showSearchLocationResult(result: [SearchLocationModel.ViewModel])
 }
 
 class HomeViewController: BaseViewController {
@@ -21,11 +22,17 @@ class HomeViewController: BaseViewController {
     ///interactor
     var interactor: HomeInteractorProtocol!
     
-    //let promptView = HomeView()
     var mapView = MKMapView()
     let inputActivationView = InputActivationView()
     let locationInputView = LocationInputView()
     let tableView = UITableView()
+    
+    ///data
+    var searchResult: [SearchLocationModel.ViewModel]? {
+        didSet {
+            tableView.reloadData()
+        }
+    }
     
     //MARK:- Life Cycle
     override func viewDidLoad() {
@@ -45,7 +52,6 @@ class HomeViewController: BaseViewController {
     
     //MARK:- Setup view
     private func configureView() {
-        //view = promptView
         configureMapView()
         configureInputActivationView()
         configureTableView()
@@ -126,6 +132,10 @@ class HomeViewController: BaseViewController {
 }
 
 extension HomeViewController: HomeViewProtocol {
+    func showSearchLocationResult(result: [SearchLocationModel.ViewModel]) {
+        searchResult = result
+    }
+    
     func showingDriverAnnotation(mapView: MKMapView) {
         self.mapView = mapView
     }

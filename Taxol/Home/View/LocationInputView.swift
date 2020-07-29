@@ -67,6 +67,7 @@ class LocationInputView: BaseView {
         tf.backgroundColor = .lightGray
         tf.returnKeyType = .search
         tf.font = UIFont.systemFont(ofSize: 14)
+        tf.delegate = self
         return tf
     }()
 
@@ -114,4 +115,14 @@ class LocationInputView: BaseView {
         homeVC?.dismissLocationInputView()
     }
         
+}
+
+extension LocationInputView: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        guard let text = textField.text else { return false }
+        guard let homeVC = homeVC else { return false}
+        let request = SearchLocationModel.Request(query: text)
+        homeVC.interactor.searchLocationBy(mapView: homeVC.mapView, naturalLangQuery: request)
+        return true
+    }
 }

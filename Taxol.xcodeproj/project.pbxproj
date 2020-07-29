@@ -30,7 +30,6 @@
 		8B73773D24C9B1D3009E202A /* LoginBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B73773C24C9B1D3009E202A /* LoginBuilder.swift */; };
 		8B9EE01224CBCEB700F0490D /* SignUpModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9EE01124CBCEB700F0490D /* SignUpModel.swift */; };
 		8B9EE01424CBD92600F0490D /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9EE01324CBD92600F0490D /* LoginModel.swift */; };
-		8B9EE01624CBDB1900F0490D /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9EE01524CBDB1900F0490D /* HomeView.swift */; };
 		8B9EE01824CBE66F00F0490D /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9EE01724CBE66F00F0490D /* LoginPresenter.swift */; };
 		8B9EE01A24CBEBE400F0490D /* SignUpViewController+ViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9EE01924CBEBE400F0490D /* SignUpViewController+ViewProtocol.swift */; };
 		8B9EE01D24CBFE7000F0490D /* LocationWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9EE01C24CBFE7000F0490D /* LocationWorker.swift */; };
@@ -75,7 +74,6 @@
 		8B73773C24C9B1D3009E202A /* LoginBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginBuilder.swift; sourceTree = "<group>"; };
 		8B9EE01124CBCEB700F0490D /* SignUpModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpModel.swift; sourceTree = "<group>"; };
 		8B9EE01324CBD92600F0490D /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
-		8B9EE01524CBDB1900F0490D /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		8B9EE01724CBE66F00F0490D /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		8B9EE01924CBEBE400F0490D /* SignUpViewController+ViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignUpViewController+ViewProtocol.swift"; sourceTree = "<group>"; };
 		8B9EE01C24CBFE7000F0490D /* LocationWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationWorker.swift; sourceTree = "<group>"; };
@@ -129,7 +127,6 @@
 				8B9EE03424CFCDC500F0490D /* HomeModel.swift */,
 				8B9EE02024CBFFC000F0490D /* HomePresenter.swift */,
 				8B9EE01E24CBFFB200F0490D /* HomeInteractor.swift */,
-				8B9EE01524CBDB1900F0490D /* HomeView.swift */,
 				8B9EE02424CD531100F0490D /* View */,
 			);
 			path = Home;
@@ -425,7 +422,6 @@
 				8B73771A24C95FBA009E202A /* ViewController.swift in Sources */,
 				8B73773B24C9B0CE009E202A /* SignUpViewController.swift in Sources */,
 				8B9EE02A24CE9F5D00F0490D /* HomeViewController+TableView.swift in Sources */,
-				8B9EE01624CBDB1900F0490D /* HomeView.swift in Sources */,
 				8B73773424C9A564009E202A /* BaseView.swift in Sources */,
 				8B73773924C9B056009E202A /* LoginRouter.swift in Sources */,
 				8B9EE01A24CBEBE400F0490D /* SignUpViewController+ViewProtocol.swift in Sources */,

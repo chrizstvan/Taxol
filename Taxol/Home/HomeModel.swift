@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import MapKit
 
 enum HomeModel {
     struct Request {
@@ -24,6 +25,24 @@ enum HomeModel {
             fullname = user.user.fullname
             email = user.user.email
             userType = user.user.userType
+        }
+    }
+}
+
+enum SearchLocationModel {
+    struct Request {
+        var query: String
+    }
+    struct Response {
+        var placemarks: [MKPlacemark]
+    }
+    struct ViewModel {
+        let title: String
+        let subtitle: String
+        
+        init(placemark: MKPlacemark) {
+            self.title = placemark.name ?? ""
+            self.subtitle = placemark.address ?? ""
         }
     }
 }

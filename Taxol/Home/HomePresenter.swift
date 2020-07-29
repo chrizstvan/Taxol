@@ -14,6 +14,7 @@ protocol HomePresenterProtocol {
     func didLoadUserData(user: HomeModel.Response)
     func getDriverAnnotation(mapView: MKMapView, annotation: DriverAnnotation)
     func updateDriverAnnotation(mapView: MKMapView, driverAnnotation: DriverAnnotation, updatedCoordinate: CLLocationCoordinate2D)
+    func didFoundLocation(response: SearchLocationModel.Response)
 }
 
 final class HomePresenter: HomePresenterProtocol {
@@ -36,5 +37,10 @@ final class HomePresenter: HomePresenterProtocol {
     func updateDriverAnnotation(mapView: MKMapView, driverAnnotation: DriverAnnotation, updatedCoordinate: CLLocationCoordinate2D) {
         driverAnnotation.updateAnnotationPosition(withCoordinate: updatedCoordinate)
         
+    }
+    
+    func didFoundLocation(response: SearchLocationModel.Response) {
+        let placemarkList = response.placemarks.map{ return SearchLocationModel.ViewModel(placemark: $0)}
+        view?.showSearchLocationResult(result: placemarkList)
     }
 }

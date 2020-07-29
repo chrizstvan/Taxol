@@ -14,11 +14,17 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return section == 0 ? 2 : 5
+        let searchCount = searchResult?.count ?? 0
+        return section == 0 ? 2 : searchCount
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "LocationCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "LocationCell", for: indexPath) as! LocationCell
+        if indexPath.section == 1 {
+            if let search = searchResult {
+                cell.placemark = search[indexPath.row]
+            }
+        }
         return cell
     }
     
