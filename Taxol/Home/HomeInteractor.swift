@@ -8,11 +8,12 @@
 
 import Foundation
 import Firebase
+import MapKit
 
 protocol HomeInteractorProtocol {
     func loginCheck()
     func chekLocationAuth()
-    func getDriverData(radius: Double)
+    func getDriverData(mapView: MKMapView, radius: Double)
 }
 
 final class HomeInteractor: HomeInteractorProtocol {
@@ -43,10 +44,26 @@ final class HomeInteractor: HomeInteractorProtocol {
         }
     }
     
-    func getDriverData(radius: Double) {
+    func getDriverData(mapView: MKMapView,radius: Double) {
         guard let location = locationWorker.locationManager.location else { return }
-        ServiceManager.fetchDriver(location: location, radius: radius) { (user) in
-            print("driver is \(user.fullname)")
+        ServiceManager.fetchDriver(location: location, radius: radius) { (driver) in
+            guard let coordinate = driver.location?.coordinate else { return }
+            let annotation = DriverAnnotation(uid: driver.uid, coordinate: coordinate)
+            
+            var driverIsVisible: Bool {
+                return mapView.annotations.contains { (driverAnno) -> Bool in
+                    guard let mark = driverAnno as? DriverAnnotation else { return false }
+                    if mark.uid == driver.uid {
+                        self.presenter.updateDriverAnnotation(mapView: mapView, driverAnnotation: mark, updatedCoordinate: coordinate)
+                        return true
+                    }
+                    return false
+                }
+            }
+            
+            if !driverIsVisible {
+                self.presenter.getDriverAnnotation(mapView: mapView, annotation: annotation)
+            }
         }
     }
     

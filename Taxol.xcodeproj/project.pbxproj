@@ -44,6 +44,7 @@
 		8B9EE03024CEEB3B00F0490D /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9EE02F24CEEB3B00F0490D /* ServiceManager.swift */; };
 		8B9EE03324CEF31400F0490D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9EE03224CEF31400F0490D /* User.swift */; };
 		8B9EE03524CFCDC500F0490D /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9EE03424CFCDC500F0490D /* HomeModel.swift */; };
+		8B9EE03724D0761900F0490D /* DriverAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9EE03624D0761900F0490D /* DriverAnnotation.swift */; };
 		9B7FA36CE5BA4CE580EE86C5 /* Pods_Taxol.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD5189C15C9F436762A3D0F5 /* Pods_Taxol.framework */; };
 /* End PBXBuildFile section */
 
@@ -88,6 +89,7 @@
 		8B9EE02F24CEEB3B00F0490D /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
 		8B9EE03224CEF31400F0490D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		8B9EE03424CFCDC500F0490D /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
+		8B9EE03624D0761900F0490D /* DriverAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverAnnotation.swift; sourceTree = "<group>"; };
 		ABC013E19B5B748BD5850F23 /* Pods-Taxol.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Taxol.release.xcconfig"; path = "Target Support Files/Pods-Taxol/Pods-Taxol.release.xcconfig"; sourceTree = "<group>"; };
 		BD5189C15C9F436762A3D0F5 /* Pods_Taxol.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Taxol.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -267,6 +269,7 @@
 			isa = PBXGroup;
 			children = (
 				8B9EE03224CEF31400F0490D /* User.swift */,
+				8B9EE03624D0761900F0490D /* DriverAnnotation.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -416,6 +419,7 @@
 				8B9EE01824CBE66F00F0490D /* LoginPresenter.swift in Sources */,
 				8B73773024C96C93009E202A /* Extensions.swift in Sources */,
 				8B9EE02124CBFFC000F0490D /* HomePresenter.swift in Sources */,
+				8B9EE03724D0761900F0490D /* DriverAnnotation.swift in Sources */,
 				8B9EE02324CBFFCF00F0490D /* HomeBuilder.swift in Sources */,
 				8B73772C24C96007009E202A /* LoginViewController.swift in Sources */,
 				8B73771A24C95FBA009E202A /* ViewController.swift in Sources */,

@@ -13,6 +13,7 @@ import MapKit
 protocol HomeViewProtocol: class {
     func userNotLogin(nav: UINavigationController)
     func loadUser(user: HomeModel.ViewModel)
+    func showingDriverAnnotation(mapView: MKMapView)
 }
 
 class HomeViewController: BaseViewController {
@@ -21,7 +22,7 @@ class HomeViewController: BaseViewController {
     var interactor: HomeInteractorProtocol!
     
     //let promptView = HomeView()
-    let mapView = MKMapView()
+    var mapView = MKMapView()
     let inputActivationView = InputActivationView()
     let locationInputView = LocationInputView()
     let tableView = UITableView()
@@ -51,6 +52,7 @@ class HomeViewController: BaseViewController {
     }
     
     private func configureMapView() {
+        mapView.delegate = self
         view.addSubview(mapView)
         mapView.frame = view.frame
         interactor.chekLocationAuth()
@@ -124,6 +126,10 @@ class HomeViewController: BaseViewController {
 }
 
 extension HomeViewController: HomeViewProtocol {
+    func showingDriverAnnotation(mapView: MKMapView) {
+        self.mapView = mapView
+    }
+    
     func userNotLogin(nav: UINavigationController) {
         self.present(nav, animated: true, completion: nil)
     }
@@ -133,7 +139,7 @@ extension HomeViewController: HomeViewProtocol {
     }
     
     private func fetchDriverNearBy() {
-        interactor.getDriverData(radius: 50)
+        interactor.getDriverData(mapView: mapView, radius: 50)
     }
     
     func loadUser(user: HomeModel.ViewModel) {
@@ -142,6 +148,15 @@ extension HomeViewController: HomeViewProtocol {
             self.locationInputView.userVM = user
         }
     }
-    
-    
+}
+
+extension HomeViewController: MKMapViewDelegate {
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        if let annotation = annotation as? DriverAnnotation {
+            let view = MKAnnotationView(annotation: annotation, reuseIdentifier: "DriverMark")
+            view.image = #imageLiteral(resourceName: "chevron-sign-to-right")
+            return view
+        }
+        return nil
+    }
 }

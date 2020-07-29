@@ -7,10 +7,13 @@
 //
 
 import UIKit
+import MapKit
 
 protocol HomePresenterProtocol {
     func userNotLogin(nav: UINavigationController)
     func didLoadUserData(user: HomeModel.Response)
+    func getDriverAnnotation(mapView: MKMapView, annotation: DriverAnnotation)
+    func updateDriverAnnotation(mapView: MKMapView, driverAnnotation: DriverAnnotation, updatedCoordinate: CLLocationCoordinate2D)
 }
 
 final class HomePresenter: HomePresenterProtocol {
@@ -25,4 +28,13 @@ final class HomePresenter: HomePresenterProtocol {
         view?.userNotLogin(nav: nav)
     }
     
+    func getDriverAnnotation(mapView: MKMapView, annotation: DriverAnnotation) {
+        mapView.addAnnotation(annotation)
+        view?.showingDriverAnnotation(mapView: mapView)
+    }
+    
+    func updateDriverAnnotation(mapView: MKMapView, driverAnnotation: DriverAnnotation, updatedCoordinate: CLLocationCoordinate2D) {
+        driverAnnotation.updateAnnotationPosition(withCoordinate: updatedCoordinate)
+        
+    }
 }
